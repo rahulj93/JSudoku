@@ -8,7 +8,7 @@ This project uses JavaScript to generate a modern Sudoku board with some prefill
 
 Potential Future Tweaks: 
 - Allowing a user to choose difficulty level of the game, with varying level of prefilled spaces. 
-- Add a 3rd dimension, maybe a 9 x 9 x 9 cube. (along with some nice visuals)
+- 3D Sudoku: Add a 3rd dimension, maybe a 9 x 9 x 9 cube. (along with some nice visuals)
 
 ### Functionality and MVPs:
 
@@ -16,12 +16,9 @@ Potential Future Tweaks:
 - Generate a new, solvable Sudoku board by clicking a button (using JavaScript event handling) 
 - Use JavaScript Document Object Model to manipulate HTML Canvas 
 
-
-
-If I can find a way to allow user input on Canvas, then I'll also include the following functionality: 
-- Render an error when user makes an invalid move, and prevent the move from happening 
-- Generate a score ( some function of time taken and number of invalid moves attempted)
-
+### Other Features (not part of MVP): 
+- Render error when user makes an invalid move. 
+- Generate a score (some function based on number of invalid moves attempted)
 
 ### Wireframes:
 
@@ -45,7 +42,7 @@ Sudoku:
 
 - JavaScript (Canvas, ...)
 
-### Implementation Timeline: 
+### Implementation Timeline for MVP: 
 
 3 days 
 
