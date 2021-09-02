@@ -14,7 +14,7 @@ Potential Future Tweaks:
 
 - Write an original algorithm using Object-Oriented Programming to generate a Sudoku board
 - Generate a new, solvable Sudoku board by clicking a button (using JavaScript event handling) 
-- Use JavaScript Document Object Model to manipulate HTML Canvas 
+- Use JavaScript Document Object Model to manipulate HTML nodes 
 
 ### Other Features (not part of MVP): 
 - Render error when user makes an invalid move. 
