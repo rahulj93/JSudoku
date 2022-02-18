@@ -1,4 +1,4 @@
-## [JSudoku](https://rahulj93.github.io/JavaScript-Project---Sudoku/)
+## [JSudoku](https://rahulj93.github.io/JSudoku/)
 
 ### Background and Overview:
 
