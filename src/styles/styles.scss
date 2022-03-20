@@ -1,9 +1,5 @@
 html {
   display: flex;
-  // flex-flow: column wrap;
-  // justify-content: space-between;
-  // align-items: stretch;
-  // flex-direction: column;
   background-color: rgb(145, 143, 143);
   background-color: whitesmoke;
   width: 100%;
@@ -13,13 +9,6 @@ html {
 // #myCanvas { 
 //   margin: 70 auto; 
 // } 
-
-// #subCanvas { 
-//   background: whitesmoke; 
-//   display: block; 
-//   position: relative;
-//   // margin: 40 auto; 
-// }
 
 input {
   position: absolute;
@@ -31,8 +20,6 @@ input {
 
 canvas { 
   background: #eee; 
-  // flex-wrap: wrap; 
-  // display: flex; 
   margin: 70 auto; 
 }
 
@@ -47,24 +34,10 @@ body {
 }
 
 .sidePanel {
-  // background-color:darkolivegreen; 
-  // background-color:rgb(55, 78, 14); 
-  color: darkgoldenrod; 
-  // background-color: yellowgreen;  
-  // margin-top: 70; 
-  // margin-bottom: 70; 
+  color: darkgoldenrod;  
   margin-left: 15;
   margin-right: 15;
   width: 15vw;
-  // line-height: 40px;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-  // align-content: center;
-  // padding: 20px;
-  // padding: 2vw;
-
-
   height: 54vh;
 }
 
@@ -72,14 +45,7 @@ body {
   width: 100vw; 
   color: darkgoldenrod; 
   margin-bottom: 10vh;
-
-  // display: flex; 
-  // flex-direction: row;
-  // flex-wrap: wrap;
   text-align: center;
-  // justify-items: center;
-  // align-items: center;
-  // justify-content: center;
 }
 
 // .bottomPanel {

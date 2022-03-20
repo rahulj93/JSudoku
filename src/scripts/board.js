@@ -1,22 +1,20 @@
 const puzzles = require("./puzzles"); 
 const puzzleSolutions = require("./puzzle_solutions"); 
+
+class Row {
+  constructor() {
+    return {
+      1: [], 2: [], 3: [],
+      4: [], 5: [], 6: [],
+      7: [], 8: [], 9: [],
+    };
+  };
+};
 class Grid {
   constructor() {
-    this.templateRows = {
-      1: [], 2: [], 3: [],
-      4: [], 5: [], 6: [],
-      7: [], 8: [], 9: [],
-    }; 
-    this.rowSolutions = {
-      1: [], 2: [], 3: [],
-      4: [], 5: [], 6: [],
-      7: [], 8: [], 9: [],
-    }; 
-    this.updatedRows = {
-      1: [], 2: [], 3: [],
-      4: [], 5: [], 6: [],
-      7: [], 8: [], 9: [],
-    }
+    this.templateRows =  new Row(); 
+    this.rowSolutions = new Row();   
+    this.updatedRows = new Row(); 
 
     this.emptyCount = 0; 
     this.score = 0; 
@@ -52,51 +50,52 @@ class Grid {
 
   transposeTemplate() {
     let randompuzzle = Math.ceil(Math.random() * 10);
+    const puzzle = puzzles.sudokuPuzzles[randompuzzle]; 
+    const solution = puzzleSolutions.sudokuPuzzleSolutions[randompuzzle]; 
 
     for (let i = 0; i < 3; i++) {
       for (let j = 0; j < 3; j++) {
-        this.templateRows[1].push(puzzles.sudokuPuzzles[randompuzzle][i][j]);
-        this.rowSolutions[1].push(puzzleSolutions.sudokuPuzzleSolutions[randompuzzle][i][j]);
+        this.templateRows[1].push(puzzle[i][j]);
+        this.rowSolutions[1].push(solution[i][j]);
       }
       for (let j = 3; j < 6; j++) {
-        this.templateRows[2].push(puzzles.sudokuPuzzles[randompuzzle][i][j]);
-        this.rowSolutions[2].push(puzzleSolutions.sudokuPuzzleSolutions[randompuzzle][i][j]);
+        this.templateRows[2].push(puzzle[i][j]);
+        this.rowSolutions[2].push(solution[i][j]);
       }
       for (let j = 6; j < 9; j++) {
-        this.templateRows[3].push(puzzles.sudokuPuzzles[randompuzzle][i][j]);
-        this.rowSolutions[3].push(puzzleSolutions.sudokuPuzzleSolutions[randompuzzle][i][j]);
+        this.templateRows[3].push(puzzle[i][j]);
+        this.rowSolutions[3].push(solution[i][j]);
       }
     }
     for (let i = 3; i < 6; i++) {
       for (let j = 0; j < 3; j++) {
-        this.templateRows[4].push(puzzles.sudokuPuzzles[randompuzzle][i][j]);
-        this.rowSolutions[4].push(puzzleSolutions.sudokuPuzzleSolutions[randompuzzle][i][j]);
+        this.templateRows[4].push(puzzle[i][j]);
+        this.rowSolutions[4].push(solution[i][j]);
       }
       for (let j = 3; j < 6; j++) {
-        this.templateRows[5].push(puzzles.sudokuPuzzles[randompuzzle][i][j]);
-        this.rowSolutions[5].push(puzzleSolutions.sudokuPuzzleSolutions[randompuzzle][i][j]);
+        this.templateRows[5].push(puzzle[i][j]);
+        this.rowSolutions[5].push(solution[i][j]);
       }
       for (let j = 6; j < 9; j++) {
-        this.templateRows[6].push(puzzles.sudokuPuzzles[randompuzzle][i][j]);
-        this.rowSolutions[6].push(puzzleSolutions.sudokuPuzzleSolutions[randompuzzle][i][j]);
+        this.templateRows[6].push(puzzle[i][j]);
+        this.rowSolutions[6].push(solution[i][j]);
       }
     }
     for (let i = 6; i < 9; i++) {
       for (let j = 0; j < 3; j++) {
-        this.templateRows[7].push(puzzles.sudokuPuzzles[randompuzzle][i][j]);
-        this.rowSolutions[7].push(puzzleSolutions.sudokuPuzzleSolutions[randompuzzle][i][j]);
+        this.templateRows[7].push(puzzle[i][j]);
+        this.rowSolutions[7].push(solution[i][j]);
       }
       for (let j = 3; j < 6; j++) {
-        this.templateRows[8].push(puzzles.sudokuPuzzles[randompuzzle][i][j]);
-        this.rowSolutions[8].push(puzzleSolutions.sudokuPuzzleSolutions[randompuzzle][i][j]);
+        this.templateRows[8].push(puzzle[i][j]);
+        this.rowSolutions[8].push(solution[i][j]);
       }
       for (let j = 6; j < 9; j++) {
-        this.templateRows[9].push(puzzles.sudokuPuzzles[randompuzzle][i][j]);
-        this.rowSolutions[9].push(puzzleSolutions.sudokuPuzzleSolutions[randompuzzle][i][j]);
+        this.templateRows[9].push(puzzle[i][j]);
+        this.rowSolutions[9].push(solution[i][j]);
       }
     }
-    // console.log(this.templateRows);
-    // console.log(this.rowSolutions);
+
     this.updatedRows = this.templateRows;
     // return;
   }

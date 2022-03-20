@@ -1,7 +1,7 @@
 // const Board = require("./board");
 const Grid = require("./board");
 // const CanvasSudoku = require("./canvas_board"); 
-const CanvasBoard = require("./canvas_board");
+// const CanvasBoard = require("../extra/canvas_board");
 const Timer = require("./timer"); 
 
 let begin; 
@@ -65,54 +65,54 @@ let t;
       // box.style.flexFlow = 'wrap';
 }
 
-function launchSudoku() {
-  let canvas = document.getElementById("myCanvas");
-  let ctx = canvas.getContext("2d");
-  // ctx.clearBoard();
-  // ctx.beginPath();
-  ctx.clearRect(0, 0, 540, 540);
-  // ctx.closePath();
+// function launchSudoku() {
+//   let canvas = document.getElementById("myCanvas");
+//   let ctx = canvas.getContext("2d");
+//   // ctx.clearBoard();
+//   // ctx.beginPath();
+//   ctx.clearRect(0, 0, 540, 540);
+//   // ctx.closePath();
 
-  // alert("New Board! ");
-  let b = new CanvasBoard(canvas, ctx);
-  b.generateNum();
-
-
-  // b.drawBall();
-  b.drawBoxes();
-  // b.drawBoard();
-  b.placeNums(180, 180);
-
-  b.placeNums(0, 0);
-  b.placeNums(360, 360);
-
-  b.placeNums(0, 360);
-  b.placeNums(360, 0);
+//   // alert("New Board! ");
+//   let b = new CanvasBoard(canvas, ctx);
+//   b.generateNum();
 
 
+//   // b.drawBall();
+//   b.drawBoxes();
+//   // b.drawBoard();
+//   b.placeNums(180, 180);
 
-  b.placeNums(0, 180);
-  b.placeNums(180, 0);
+//   b.placeNums(0, 0);
+//   b.placeNums(360, 360);
+
+//   b.placeNums(0, 360);
+//   b.placeNums(360, 0);
 
 
-  b.placeNums(180, 360);
-  b.placeNums(360, 180);
+
+//   b.placeNums(0, 180);
+//   b.placeNums(180, 0);
 
 
-  b.checkValues();
+//   b.placeNums(180, 360);
+//   b.placeNums(360, 180);
 
-  // b.genRows();
 
-  // b.placeNums(0,0);
+//   b.checkValues();
 
-  // b.placeNums(180, 180);
-  // b.placeNums(0, 180);
-  // b.placeNums(0, 360);
-  // b.placeNums(180, 0);
+//   // b.genRows();
 
-  b.drawOutline();
+//   // b.placeNums(0,0);
 
-}
+//   // b.placeNums(180, 180);
+//   // b.placeNums(0, 180);
+//   // b.placeNums(0, 360);
+//   // b.placeNums(180, 0);
+
+//   b.drawOutline();
+
+// }
 
 // newSudoku(); 
 let sudoku = document.getElementById("resetBoard");
