@@ -1,13 +1,19 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { webpack } = require("webpack");
 const outputDir = "./dist";
 
 module.exports = {
-  entry: path.resolve(__dirname, "src", "index.js"), //
+  entry: {
+    main: path.resolve(__dirname, "src", "index.js"), //
+    // Runtime code for hot module replacement
+    // hot: 'webpack/hot/dev-server.js' 
+  }, 
   output: {
     path: path.join(__dirname, outputDir),
     filename: "[name].js",
-    publicPath: "/dist/"
+    publicPath: "/dist/",
+    clean: true 
   },
   resolve: {
     extensions: [".js"] // if we were using React.js, we would include ".jsx"
@@ -76,6 +82,8 @@ module.exports = {
     ]
   },
   plugins: [
+    // Enable the plugin
+    // new webpack.HotModuleReplacementPlugin(), 
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // all options are optional
